@@ -1,0 +1,239 @@
+.container {
+  display: grid;
+
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 10rem 1fr 50px;
+  grid-template-areas:
+    "aside header"
+    "aside main"
+    "aside footer";
+
+  height: 100vh;
+}
+
+.header-container {
+  display: flex;
+  position: absolute;
+  margin-top: 2rem;
+  align-items: stretch;
+}
+
+.header-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-child img {
+  position: relative;
+  border-radius: 50%;
+  margin-left: 1rem;
+  border: 2px solid red;
+  overflow: hidden;
+}
+
+.header-child img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(
+    circle,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+  );
+  z-index: -1;
+}
+
+.header-child p {
+  margin-left: 1.1rem;
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+.aside {
+  grid-area: aside;
+
+  border-right: 1px solid salmon;
+}
+
+.aside > h2 {
+  font-family: "Italianno";
+  font-size: 50px;
+  font-weight: 400;
+  color: #f44cf8;
+  margin-left: 1rem;
+}
+.aside-container {
+  display: flex;
+
+  flex-direction: column;
+  font-family: "San Francisco";
+  font-weight: lighter;
+  font-size: 14px;
+  gap: 0;
+}
+.search {
+  display: flex;
+  margin-right: 0.5rem;
+  padding-left: 1rem;
+  margin-left: 0;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+.search:hover {
+  background-color: hsl(0, 0%, 80%);
+}
+.search img {
+  margin-right: 1rem;
+}
+.search h4 {
+  font: 1.1em "Proxima Nova Regular", Arial, sans-serif;
+}
+
+.home {
+  display: flex;
+  margin-right: 0.5rem;
+  padding-left: 1rem;
+  margin-left: 0;
+
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+.home:hover {
+  background-color: hsl(0, 0%, 80%);
+}
+.home img {
+  margin-right: 1rem;
+}
+.home h4 {
+  font: 1.1em "Circular", "Helvetica Neue", Arial, sans-serif;
+}
+.reels {
+  display: flex;
+  margin-right: 0.5rem;
+  padding-left: 1rem;
+  margin-left: 0;
+
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+.reels:hover {
+  background-color: hsl(0, 0%, 80%);
+}
+.reels img {
+  margin-right: 1rem;
+}
+.reels h4 {
+  font: 1.1em "Aveny T Regular", Arial, sans-serif;
+}
+
+.header {
+  grid-area: header;
+  position: relative;
+  margin-top: 0;
+  border-bottom: 1px solid salmon;
+}
+
+.main {
+  grid-area: main;
+  display: grid;
+  grid-gap: 10px;
+}
+.main-charter {
+  display: flex;
+  flex-direction: row;
+  margin-left: 3rem;
+  margin-bottom: 1rem;
+}
+.main-charter img {
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+.charter-name-info {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.main-charter p {
+  font-size: 1rem;
+}
+.charterid {
+  color: hsl(0, 0%, 40%);
+}
+#chart-time {
+  color: hsl(0, 0%, 40%);
+}
+.send-info {
+  display: flex;
+  flex-direction: row;
+  margin-left: 3rem;
+}
+.send-info img:nth-child(1) {
+  border-top-left-radius: 0.2rem;
+  border-bottom-left-radius: 0.2rem;
+}
+.send-info img:nth-child(2) {
+  border-top-right-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+}
+.insta-svg {
+  display: flex;
+  margin-left: 2rem;
+  justify-content: space-between;
+}
+.insta-svg svg {
+  margin-left: 1rem;
+  margin-top: 0.3rem;
+  /* background-color: transparent; */
+}
+.insta-svg svg:nth-child(2):hover {
+  background-color: hsl(0, 0%, 90%);
+}
+.insta-svg svg:nth-child(3):hover {
+  background-color: hsl(0, 0%, 90%);
+}
+.insta-svg > img:hover {
+  background-color: hsl(0, 0%, 90%);
+}
+.insta-svg > img {
+  margin-right: 5.9rem;
+}
+.likes-info,
+.views-info,
+.do-comment-info {
+  margin-left: 3rem;
+}
+
+.footer {
+  grid-area: footer;
+  background: #9b5de5;
+}
+.chart-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 200px 200px;
+  grid-template-areas:
+    "chart overview"
+    "chart overview"
+    "chart overview";
+}
+.chart {
+  grid-area: chart;
+  border: 2px solid blueviolet;
+  border-right: 1px solid #00f5d4;
+  border-radius: 0.2rem;
+}
+
+.chart-overview {
+  grid-area: overview;
+
+  background: #00f5d4;
+  height: 200px;
+}
