@@ -2,8 +2,13 @@ import bgImg from "./assets/home.svg";
 import rgImg from "./assets/reels.svg";
 import sgImg from "./assets/search.svg";
 import mgImg from "./assets/madhu.png";
+import srgImg from "./assets/Sravan.png";
 import egImg from "./assets/elon.png";
 import ngImg from "./assets/nara.png";
+import vgImg from "./assets/venky.png";
+import rgvgImg from "./assets/rgv.png";
+import bilgImg from "./assets/billgate.png";
+import kgImg from "./assets/kumar.png";
 import hgImg from "./assets/heart.svg";
 import cgImg from "./assets/comment.svg";
 import shgImg from "./assets/share.svg";
@@ -16,13 +21,27 @@ function App() {
     <div className="container">
       <section className="header">
         <div className="header-container">
-          <div className="header-child">
-            <img src={mgImg} width={70} height={70}></img>
-            <p>madhu.polu...</p>
+          <div className="header-child-info">
+            <div className="header-child">
+              <img src={mgImg} width={70} height={70}></img>
+              <p>madhu.polu...</p>
+            </div>
+            <div className="header-child">
+              <img src={egImg} width={70} height={70}></img>
+              <p>Elon musk...</p>
+            </div>
           </div>
-          <div className="header-child">
-            <img src={egImg} width={70} height={70}></img>
-            <p>Elon musk...</p>
+          <div className="header-charter-id">
+            <div className="charter-id-info">
+              <img src={srgImg} width={72} height={72}></img>
+              <div className="user-info">
+                <li className="name">Sravan Polu</li>
+                <li className="user-id">sravankumar.polu</li>
+              </div>
+              <h4 id="charter-active" style={{ color: "blue" }}>
+                Switch
+              </h4>
+            </div>
           </div>
         </div>
       </section>
@@ -47,7 +66,7 @@ function App() {
         <div class="chart-content">
           <div class="chart">
             <div className="main-charter">
-              <img src={mgImg} width={60} height={60}></img>
+              <img src={mgImg} width={40} height={40}></img>
               <div className="charter-name-info">
                 <p className="charter-name">Madhu polu .</p>
                 {/* <p className="charterid">Original</p> */}
@@ -64,15 +83,16 @@ function App() {
                 <svg
                   aria-label="Unlike"
                   class="x1lliihq x1n2onr6"
-                  color="rgb(255, 48, 64)"
-                  fill="rgb(255, 48, 64)"
                   height="24"
                   role="img"
                   viewBox="0 0 48 48"
                   width="24"
                 >
                   <title>Unlike</title>
-                  <path d="M34.6 3.1c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5s1.1-.2 1.6-.5c1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z"></path>
+                  <path
+                    d="M34.6 3.1c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5s1.1-.2 1.6-.5c1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z"
+                    fill="#ff0000"
+                  ></path>
                 </svg>
                 <svg
                   id="Layer_1"
@@ -104,10 +124,69 @@ function App() {
             <p className="views-info">View all 78 comments</p>
             <p className="do-comment-info">Add a comment</p>
           </div>
-          <div class="chart-overview">.chart-overview</div>
+          <div className="chart-overview">
+            <div className="overview-info">
+              <h4>Suggested for you</h4>
+              <h4>See All</h4>
+            </div>
+            <div className="overview-list">
+              <img src={vgImg} width={50} height={50} />
+              <div className="friend-info">
+                <li className="name">Venkatesh Polu</li>
+                <li className="user-id">Follows you</li>
+              </div>
+              <h4 className="follows-demo" style={{ color: "blue" }}>
+                Follow
+              </h4>
+            </div>
+            <div className="overview-list">
+              <img src={kgImg} width={50} height={50} />
+              <div className="friend-info">
+                <li className="name">Kumar</li>
+                <li className="user-id">Followed by Narasimha</li>
+              </div>
+              <h4 className="follows-demo" style={{ color: "blue" }}>
+                Follow
+              </h4>
+            </div>
+            <div className="overview-list">
+              <img src={rgvgImg} width={50} height={50} />
+              <div className="friend-info">
+                <li className="name">
+                  RGVZoomIn
+                  <div
+                    data-bloks-name="ig.components.Icon"
+                    class="wbloks_1"
+                  ></div>
+                </li>
+                <li className="user-id">Followed by Puri</li>
+              </div>
+              <h4 className="follows-demo" style={{ color: "blue" }}>
+                Follow
+              </h4>
+            </div>
+            <div className="overview-list">
+              <img src={bilgImg} width={50} height={50} />
+              <div className="friend-info">
+                <li className="name">
+                  Billgate
+                  <div
+                    data-bloks-name="ig.components.Icon"
+                    class="wbloks_1"
+                  ></div>
+                </li>
+                <li className="user-id">Followed by Madhu Polu</li>
+              </div>
+              <h4 className="follows-demo" style={{ color: "blue" }}>
+                Follow
+              </h4>
+            </div>
+          </div>
         </div>
       </section>
-      <section className="footer">footer</section>
+      <section className="footer">
+        <h3>© 2023 INSTAGRAM FROM META</h3>
+      </section>
     </div>
   );
 }

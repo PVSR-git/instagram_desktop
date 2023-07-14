@@ -13,19 +13,20 @@
 
 .header-container {
   display: flex;
-  position: absolute;
+  position: relative;
+  flex-direction: row;
+
   margin-top: 2rem;
   align-items: stretch;
 }
-
-.header-child {
+.header-child-info {
   display: flex;
-  flex-direction: column;
 }
 
 .header-child img {
   position: relative;
   border-radius: 50%;
+  object-fit: cover;
   margin-left: 1rem;
   border: 2px solid red;
   overflow: hidden;
@@ -55,11 +56,45 @@
   font-size: 14px;
   opacity: 0.5;
 }
+.header-charter-id {
+  display: flex;
+
+  flex-direction: row;
+  padding-left: 30rem;
+}
+.header-charter-id img {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid gold;
+}
+.charter-id-info {
+  display: flex;
+  margin: 0;
+  font-family: sans-serif;
+}
+.user-info {
+  list-style: none;
+  margin-left: 1.5em;
+  margin-top: 1.8rem;
+}
+.user-info .name {
+  font-weight: 600;
+  color: hsl(0, 0%, 0%);
+}
+.user-info .user-id {
+  color: hsl(0, 0%, 60%);
+  font-size: 0.8rem;
+}
+
+#charter-active {
+  margin-top: 2rem;
+  margin-left: 6.7rem;
+}
 
 .aside {
   grid-area: aside;
 
-  border-right: 1px solid salmon;
+  border-right: 1px solid hsl(0, 0%, 60%);
 }
 
 .aside > h2 {
@@ -137,13 +172,13 @@
   grid-area: header;
   position: relative;
   margin-top: 0;
-  border-bottom: 1px solid salmon;
 }
 
 .main {
   grid-area: main;
   display: grid;
   grid-gap: 10px;
+  margin-top: 1rem;
 }
 .main-charter {
   display: flex;
@@ -153,11 +188,15 @@
 }
 .main-charter img {
   border-radius: 50%;
-  margin-right: 0.5rem;
+  transition: scale 2s 0.45s;
+}
+.main-charter img:hover {
+  scale: 2;
+  border: 1px solid gold;
 }
 .charter-name-info {
   display: flex;
-
+  margin-left: 0.5rem;
   flex-direction: column;
 }
 
@@ -172,8 +211,16 @@
 }
 .send-info {
   display: flex;
+  object-fit: cover;
   flex-direction: row;
   margin-left: 3rem;
+}
+.send-info img {
+  transition: scale 2s 0.45s;
+}
+.send-info img:hover {
+  scale: 1.4;
+  border-radius: 0.2rem;
 }
 .send-info img:nth-child(1) {
   border-top-left-radius: 0.2rem;
@@ -205,35 +252,92 @@
 .insta-svg > img {
   margin-right: 5.9rem;
 }
+
 .likes-info,
 .views-info,
 .do-comment-info {
   margin-left: 3rem;
 }
 
-.footer {
-  grid-area: footer;
-  background: #9b5de5;
-}
 .chart-content {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: 200px 200px;
+  grid-template-rows: 250px 200px;
   grid-template-areas:
-    "chart overview"
     "chart overview"
     "chart overview";
 }
 .chart {
   grid-area: chart;
-  border: 2px solid blueviolet;
-  border-right: 1px solid #00f5d4;
+
   border-radius: 0.2rem;
+  border-bottom: 1px solid hsl(0, 0%, 60%);
+  margin-bottom: 0.5rem;
 }
 
 .chart-overview {
   grid-area: overview;
+  display: flex;
+  position: relative;
+  flex-direction: column;
 
-  background: #00f5d4;
   height: 200px;
+}
+.overview-info {
+  display: flex;
+  justify-content: space-between;
+}
+.overview-info h4:nth-child(1) {
+  font-size: 0.8rem;
+  color: hsl(0, 0%, 40%);
+}
+.overview-info h4:nth-child(2) {
+  margin-right: 0.3rem;
+  font-size: 0.8rem;
+}
+.overview-list {
+  display: flex;
+}
+.overview-list img {
+  border-radius: 50%;
+  object-fit: cover;
+  transition: scale 2s 0.45s;
+}
+.overview-list img:hover {
+  scale: 1.5;
+}
+
+.friend-info {
+  list-style: none;
+  margin-left: 1.5em;
+
+  margin-top: 1rem;
+  width: 15.5rem;
+}
+.friend-info .name {
+  display: flex;
+  font-weight: 600;
+  color: hsl(0, 0%, 0%);
+}
+.friend-info .user-id {
+  color: hsl(0, 0%, 60%);
+  font-size: 0.8rem;
+}
+.follows-demo {
+  margin-top: 2rem;
+}
+.wbloks_1 {
+  width: 12px;
+  height: 12px;
+  margin-left: 4px;
+  -webkit-mask-image: url("https://i.instagram.com/static/images/bloks/icons/generated/verified__filled__24-4x.png/27ffd464cfc2.png");
+  -webkit-mask-size: contain;
+  background-color: rgb(0, 149, 246);
+  flex-shrink: 0;
+}
+.footer {
+  grid-area: footer;
+  background: #9b5de5;
+  padding-left: 45%;
+  padding-top: 1rem;
 }
