@@ -240,12 +240,17 @@
   margin-top: 0.3rem;
   /* background-color: transparent; */
 }
-.insta-svg svg:nth-child(2):hover {
-  background-color: hsl(0, 0%, 90%);
+.x1n2onr6:hover path,
+.x1n2onr6:active path,
+.x1n2onr6:focus path {
+  fill: red;
+  stroke: red;
 }
-.insta-svg svg:nth-child(3):hover {
-  background-color: hsl(0, 0%, 90%);
-}
+/* x1n2onr6:hover path {
+  fill: red;
+  color: red;
+} */
+
 .insta-svg > img:hover {
   background-color: hsl(0, 0%, 90%);
 }
