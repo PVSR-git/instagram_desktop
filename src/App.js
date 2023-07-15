@@ -33,7 +33,7 @@ function App() {
           </div>
           <div className="header-charter-id">
             <div className="charter-id-info">
-              <img src={srgImg} width={72} height={72}></img>
+              <img src={srgImg} width={72} height={72} className="sravan"></img>
               <div className="user-info">
                 <li className="name">Sravan Polu</li>
                 <li className="user-id">sravankumar.polu</li>

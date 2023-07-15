@@ -1,3 +1,36 @@
+:root {
+  --gradient: linear-gradient(
+    to left,
+    #ff99ff,
+    #ff00ff,
+    #ffff33,
+    #ffff66,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+}
+.sravan {
+  padding: 3px;
+}
+.sravan:hover {
+  /* width: 10px;
+  height: 10px; */
+  /* --border-width: 1px; */
+  background: var(--gradient);
+  border: 0;
+  padding: 3px;
+}
+/* .sravan::before {
+  content: "";
+  width: calc(100%-calc(var(--border-width) * 2));
+  height: calc(100%-calc(var(--border-width) * 2));
+  display: block;
+  position: absolute;
+
+  top: var(--border-width);
+  left: var(--border-width);
+} */
 .container {
   display: grid;
 
@@ -40,15 +73,6 @@
   width: 100%;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(
-    circle,
-    #feda75,
-    #fa7e1e,
-    #d62976,
-    #962fbf,
-    #4f5bd5
-  );
-  z-index: -1;
 }
 
 .header-child p {
@@ -65,7 +89,6 @@
 .header-charter-id img {
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid gold;
 }
 .charter-id-info {
   display: flex;
